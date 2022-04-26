@@ -17,10 +17,10 @@ const main = async () => {
         const db = client.db(dbName);
         const collection = db.collection(collectionName)
         console.log(shouldRewrite)
-        if(shouldRewrite == true)
+        if(shouldRewrite)
             collection.deleteMany({});
         else 
-            console.log("hi");
+            console.log("didn't rewrite");
         collection.insertMany(docs, function(err, result) {
                 if (err) throw err;
                 console.log('Inserted docs:', result.insertedCount);
