@@ -13,6 +13,6 @@ jobs:
         uses: tezz-io/mongoexport@master
         with:
           uri: ${{ secrets.MONGO_URI }}
-          export: a.json
+          export: ./a.json
           db: testdb
           collection: test
