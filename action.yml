@@ -1,0 +1,20 @@
+name: 'PR Metadata Action'
+description: 'Adds pull request file changes as a comment to a newly opened PR'
+# "mongodb+srv://cluster0.fcgos.mongodb.net/myFirstDatabase"
+inputs:
+  uri:
+    description: 'The URI of the server without username and password'
+    required: true
+  export:
+    description: 'Json file path'
+    required: true
+  db:
+    description: 'Name of the db'
+    required: true
+  collection:
+    description: 'Name of the collection'
+    required: true
+  
+runs:
+  using: 'node16'
+  main: 'index.js'
