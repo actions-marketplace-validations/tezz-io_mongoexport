@@ -1,5 +1,7 @@
 name: 'Mongo Export'
 description: 'Export json to mongo db collection'
+icon: database
+color: blue
 
 inputs:
   uri:
