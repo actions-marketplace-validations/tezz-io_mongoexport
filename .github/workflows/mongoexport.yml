@@ -21,4 +21,4 @@ jobs:
           export: a.json
           db: testDB
           collection: test
-          should-rewrite: true
+          rewrite: true
