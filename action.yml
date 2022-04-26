@@ -1,6 +1,6 @@
 name: 'PR Metadata Action'
 description: 'Adds pull request file changes as a comment to a newly opened PR'
-# "mongodb+srv://cluster0.fcgos.mongodb.net/myFirstDatabase"
+
 inputs:
   uri:
     description: 'The URI of the server without username and password'
