@@ -9,6 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Export MongoDB Json file
     steps:
+      - name: pwd
+        run: pwd
+      - name: ls
+        run: ls
       - name: Export Json
         uses: tezz-io/mongoexport@master
         with:
