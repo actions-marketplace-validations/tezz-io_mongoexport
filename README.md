@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Export Json
-        uses: tezz-io/mongoexport@master
+        uses: tezz-io/mongoexport@v1
         with:
           uri: ${{ secrets.MONGO_URI }}
           export: a.json
