@@ -16,7 +16,8 @@ inputs:
     required: true
   should_rewrite:
     description: 'Should rewrite data'
-    required = true
+    type: boolean
+    required: = true
   
 runs:
   using: 'node16'

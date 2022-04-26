@@ -16,7 +16,7 @@ const main = async () => {
     client.connect(err => {    
         const db = client.db(dbName);
         const collection = db.collection(collectionName)
-        if(shouldRewrite == "true")
+        if(shouldRewrite == true)
             collection = collection.deleteMany({});
         collection.insertMany(docs, function(err, result) {
                 if (err) throw err;
