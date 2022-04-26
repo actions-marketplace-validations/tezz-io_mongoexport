@@ -10,10 +10,6 @@ jobs:
     name: Export MongoDB Json file
     steps:
       - uses: actions/checkout@v2
-      - name: pwd
-        run: pwd
-      - name: ls
-        run: ls
       - name: Export Json
         uses: tezz-io/mongoexport@master
         with:
