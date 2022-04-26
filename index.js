@@ -19,8 +19,6 @@ const main = async () => {
         console.log(shouldRewrite)
         if(shouldRewrite)
             collection.deleteMany({});
-        else 
-            console.log("didn't rewrite");
         collection.insertMany(docs, function(err, result) {
                 if (err) throw err;
                 console.log('Inserted docs:', result.insertedCount);
