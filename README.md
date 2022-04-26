@@ -8,7 +8,7 @@ Export a json file to a collection
 
 with ->
 1. uri - in the format `mongodb+srv://<username>:<password>@<cluster-name>.xxxxx.mongodb.net`
-2. export - name of json
+2. export - path of json from root
 3. db - name of db
 4. collection - name of collection
 5. rewrite - true for rewrite, false for append
