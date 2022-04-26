@@ -9,10 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     name: Export MongoDB Json file
     steps:
+      - uses: actions/checkout@v2
+      - name: pwd
+        run: pwd
+      - name: ls
+        run: ls
       - name: Export Json
         uses: tezz-io/mongoexport@master
         with:
           uri: ${{ secrets.MONGO_URI }}
-          export: ./a.json
-          db: testdb
+          export: a.json
+          db: testDB
           collection: test
