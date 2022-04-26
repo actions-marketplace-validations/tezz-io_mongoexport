@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Export MongoDB Json file
     steps:
+      - uses: actions/checkout@v2
       - name: pwd
         run: pwd
       - name: ls
