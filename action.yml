@@ -14,6 +14,9 @@ inputs:
   collection:
     description: 'Name of the collection'
     required: true
+  should_rewrite:
+    description: 'Should rewrite data'
+    required = true
   
 runs:
   using: 'node16'
