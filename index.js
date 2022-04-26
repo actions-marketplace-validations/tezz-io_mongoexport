@@ -8,7 +8,7 @@ const main = async () => {
     const dbName = core.getInput('db', {required: true});
     const collectionName = core.getInput('collection', {required: true});
     const jsonFileName = core.getInput('export', {required: true});
-    const shouldRewrite = core.getInput('rewrite');
+    const shouldRewrite = core.getInput('rewrite', {required: true});
     const data = fs.readFileSync(jsonFileName)
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
     const docs = JSON.parse(data.toString());
@@ -16,6 +16,7 @@ const main = async () => {
     client.connect(err => {    
         const db = client.db(dbName);
         const collection = db.collection(collectionName)
+        console.log(shouldRewrite)
         if(shouldRewrite == true)
             collection.deleteMany({});
         else 
