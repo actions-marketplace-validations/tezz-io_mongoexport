@@ -10,7 +10,7 @@ jobs:
     name: Export MongoDB Json file
     steps:
       - name: Export Json
-        uses: tezz-io/mongoexport@main
+        uses: tezz-io/mongoexport@master
         with:
           uri: ${{ secrets.MONGO_URI }}
           export: 'a.json'
