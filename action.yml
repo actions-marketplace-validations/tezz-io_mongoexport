@@ -14,7 +14,7 @@ inputs:
   collection:
     description: 'Name of the collection'
     required: true
-  should_rewrite:
+  rewrite:
     description: 'Should rewrite data'
     type: boolean
     required: = true

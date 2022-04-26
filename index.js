@@ -8,7 +8,7 @@ const main = async () => {
     const dbName = core.getInput('db', {required: true});
     const collectionName = core.getInput('collection', {required: true});
     const jsonFileName = core.getInput('export', {required: true});
-    const shouldRewrite = core.getInput('should_rewrite');
+    const shouldRewrite = core.getInput('rewrite');
     const data = fs.readFileSync(jsonFileName)
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
     const docs = JSON.parse(data.toString());
